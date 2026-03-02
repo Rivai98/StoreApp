@@ -5,8 +5,7 @@ import 'package:store_app/core/routing/app_router.dart';
 import 'package:store_app/core/routing/app_routes.dart';
 import 'package:store_app/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
 import 'package:store_app/features/home/presentation/view_model/product_cubit/product_cubit.dart';
-import 'package:store_app/features/home/presentation/views/home_page.dart';
-import 'package:store_app/features/auth/presentation/views/login_page.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 Future<void> main() async {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:store_app/core/routing/app_routes.dart';
 
 import 'package:store_app/core/widgets/custom_button.dart';
 import 'package:store_app/features/auth/presentation/view_model/login_cubit/login_cubit.dart';
@@ -18,6 +19,15 @@ class HomePage extends StatelessWidget {
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text("Home Page"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              BlocProvider.of<LoginCubit>(context).logout();
+              Navigator.pushReplacementNamed(context, AppRoutes.loginRoute);
+            },
+            icon: Icon(Icons.logout_outlined),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Center(

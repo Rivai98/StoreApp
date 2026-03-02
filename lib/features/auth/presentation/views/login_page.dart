@@ -71,7 +71,11 @@ class _LoginPageState extends State<LoginPage> {
           child: SafeArea(
             child: Scaffold(
               backgroundColor: Colors.white,
-              appBar: AppBar(backgroundColor: Colors.white),
+              appBar: AppBar(
+                backgroundColor: Colors.white,
+                automaticallyImplyLeading: false,
+                actions: [],
+              ),
 
               body: SingleChildScrollView(
                 child: Padding(
